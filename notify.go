@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	ioutil "io"
 	"net/http"
 	"regexp"
 	"strings"
@@ -17,6 +17,7 @@ import (
 )
 
 // NotificationCreator  ...
+//
 //go:generate mockgen -destination ./mock/mock_notificationcreator.go -package mock github.com/bayugyug/slack NotificationCreator
 type NotificationCreator interface {
 	Notify(messages []*Payload, meta ...Block) error
@@ -45,7 +46,6 @@ func NewNotification(path string) NotificationCreator {
 
 // Notify ...
 func (s *Notification) Notify(messages []*Payload, meta ...Block) error {
-
 	// sanity check
 	if len(messages) <= 0 && len(meta) <= 0 {
 		return ErrMissingParams
@@ -146,7 +146,7 @@ func (s *Notification) Notify(messages []*Payload, meta ...Block) error {
 
 	b, _ := ioutil.ReadAll(ret.Body)
 	if tmp := string(b); tmp != `ok` {
-		err = fmt.Errorf("failed response body not ok: %v", tmp)
+		err = fmt.Errorf("failed response body not ok")
 		log.WithError(err).Println("body")
 		return err
 	}
