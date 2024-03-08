@@ -12,10 +12,8 @@ import (
 
 func main() {
 	// init
-	var (
-		servicePath = os.Getenv("SLACK_TOKEN")
-		alert       = slack.NewNotification(servicePath)
-	)
+
+	servicePath := os.Getenv("SLACK_TOKEN")
 
 	log.Println("ALL-URL:", servicePath)
 
@@ -23,6 +21,11 @@ func main() {
 		fmt.Println("Token is required.")
 		os.Exit(1)
 	}
+
+	alert := slack.NewNotification(servicePath)
+
+	// add timestamp
+	alert.WithTimer(true)
 
 	// push
 	err := alert.Notify([]*slack.Payload{
