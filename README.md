@@ -83,7 +83,7 @@ log.Println("sent success")
 
 
 ### Screenshot
-![Screenshot](testdata/slack-alert.png)
+![Screenshot](testdata/SLACK.png)
 
 
 ### [Configure the webhook](https://api.slack.com/messaging/webhooks)
