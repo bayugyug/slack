@@ -80,6 +80,19 @@ log.Println("sent success")
 
 ```
 
+### Simulate sending alert message
+    - export token to ENVT
+        ex:
+            export SLACK_TOKEN='/services/zzzzzz/yyyy/xxxxx'
+
+```shell
+
+    # run the simulator
+
+    go run cmd/simulator/main.go
+
+```
+
 
 
 ### Screenshot
