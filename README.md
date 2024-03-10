@@ -80,8 +80,24 @@ log.Println("sent success")
 
 ```
 
+### Simulate sending alert message
+    - export token to ENVT
+        ex:
+            export SLACK_TOKEN='/services/zzzzzz/yyyy/xxxxx'
+
+```shell
+
+    # run the simulator
+
+    go run cmd/simulator/main.go
+
+```
+
 
 
 ### Screenshot
-![Screenshot](testdata/slack-alert.png)
+![Screenshot](testdata/SLACK.png)
+
+
+### [Configure the webhook](https://api.slack.com/messaging/webhooks)
 
