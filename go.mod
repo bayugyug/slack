@@ -3,7 +3,7 @@ module github.com/bayugyug/slack
 go 1.20
 
 require (
-	github.com/bayugyug/authorizer v0.0.0-20240307175307-ebabb0ee4452
+	github.com/bayugyug/commons v0.0.0-20240310093003-afd70a586e29
 	github.com/go-chi/render v1.0.3
 	github.com/google/uuid v1.6.0
 	github.com/icrowley/fake v0.0.0-20221112152111-d7b7e2276db2

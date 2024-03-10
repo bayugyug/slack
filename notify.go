@@ -13,7 +13,7 @@ import (
 	"github.com/google/uuid"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/bayugyug/authorizer/commons"
+	"github.com/bayugyug/commons"
 )
 
 // NotificationCreator  ...
