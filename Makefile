@@ -39,6 +39,9 @@ args = `arg="$(filter-out $@,$(MAKECMDGOALS))" && echo $${arg:-${1}}`
 try:
 	@echo $(call args,defaultstring)
 
+simulate:
+	@go run cmd/simulator/main.go
+
 .PHONY: clean lint ci-test ci-cover proto cover codecov
 
 init:

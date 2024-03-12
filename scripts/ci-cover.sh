@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 echo "Start"
 
 #init
@@ -12,13 +14,13 @@ echo "Checking the cover-file: $(ls -ltra ${COVERPROF} 2>/dev/null)"
 go get -u -v github.com/mattn/goveralls
 
 #run
-goveralls -coverprofile=${COVERPROF} -service=generic-rest-api -repotoken=$COVERALLS_REPO_TOKEN
+goveralls -coverprofile=${COVERPROF} -service=gap-paynow-qrcode-backend -repotoken=$COVERALLS_REPO_TOKEN
 
 #dump
 echo "result:$?"
 
 [[ -s "${COVERPROF}" ]] && {
-  echo "coverall okay"
+    echo "coverall okay"
 }
 
 echo "Done:${COVERPROF}"
