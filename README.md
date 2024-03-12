@@ -92,7 +92,9 @@ log.Println("sent success")
 
     # run generate mock
     make proto
-    
+
+    # run simulator ( refer the detailed prerequisite below )
+    make simulate
     
 ```
 
@@ -109,7 +111,7 @@ log.Println("sent success")
 
     go run cmd/simulator/main.go
 
-    # or 
+    # run make 
     make simulate
 
 ```
