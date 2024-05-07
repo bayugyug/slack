@@ -80,6 +80,26 @@ log.Println("sent success")
 
 ```
 
+### Run Test
+
+```shell
+
+    # run CI TEST
+    make ci-test
+
+    # run CI LINT
+    make ci-lint
+
+    # run generate mock
+    make proto
+
+    # run simulator ( refer the detailed prerequisite below )
+    make simulate
+    
+```
+
+
+
 ### Simulate sending alert message
     - export token to ENVT
         ex:
@@ -90,6 +110,9 @@ log.Println("sent success")
     # run the simulator
 
     go run cmd/simulator/main.go
+
+    # run make 
+    make simulate
 
 ```
 
