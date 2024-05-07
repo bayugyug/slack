@@ -1,5 +1,5 @@
 # slack
-Package enables notify message to a Slack Channel via Slack API. 
+Package enables notify message to a Slack Channel via Slack API.
 - Prerequisite must have a Slack Account
 
 
@@ -29,7 +29,7 @@ alert := slack.NewNotification(servicePath)
 
 
 
-// push 
+// push
 err := alert.Notify([]*slack.Payload{
     {
         Title:       "Event Push",
@@ -100,5 +100,3 @@ log.Println("sent success")
 
 
 ### [Configure the webhook](https://api.slack.com/messaging/webhooks)
-
-
