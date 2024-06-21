@@ -29,6 +29,9 @@ codecov:
 proto:
 	go generate ./...
 
+coverage:
+	@./scripts/coverage.sh
+
 cover:
 	go test -v ./... -cover -coverprofile=test.coverprofile
 	gocov convert test.coverprofile | gocov-xml > coverage.xml
